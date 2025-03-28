@@ -1,0 +1,20 @@
+programa {
+
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+    
+    real A, B, C, Delta
+
+    escreva("Digite o valoe de A: ")
+    leia (A)
+    escreva("Digite o valoe de B: ")
+    leia (B)
+    escreva("Digite o valoe de C: ")
+    leia (C)
+
+     Delta = B * B - (4 * A* C)
+     escreva ("O VALOR DE DELTA E = ", mat.arredondar(Delta, 2), "\n")
+
+  }
+}
