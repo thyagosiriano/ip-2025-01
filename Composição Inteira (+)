@@ -1,0 +1,22 @@
+programa {
+  funcao inicio() {
+  inteiro n1, n2, n3, numero
+
+  escreva("digite aqui o primeiro número(centena): ")
+  leia(n1)
+
+  escreva("digite aqui o segundo número(dezena): ")
+  leia(n2)
+
+  escreva("digite aqui o terceiro número(unidade): ")
+  leia(n3)
+
+  se (n1<0 ou n2<0 ou n3<0 ou n1>=10 ou n2>=10 ou n3>=10){
+    escreva("DÍGITO INVÁLIDO")
+  }
+  senao{
+    numero = (n1*100 + n2*10 + n3)
+    escreva(numero, ", ", numero * numero)
+  }
+  }
+}
