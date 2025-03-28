@@ -1,0 +1,21 @@
+programa {
+  funcao inicio() {
+    
+   inteiro a1, r, n, soma, contador
+    
+    soma = 0
+    contador = 0 
+
+    escreva("Insira aqui o primeiro termo: ")
+    leia(a1)
+    escreva("Insira aqui a Razão: ")
+    leia(r)
+    escreva("Insira aqui o Número de termos: ")
+    leia(n)
+
+   para (contador=0; contador < n; contador++)
+    soma = a1 + r * contador + soma
+
+    escreva(soma)
+  }
+}
