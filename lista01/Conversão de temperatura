@@ -1,0 +1,22 @@
+programa {
+    inclua biblioteca Matematica --> mat
+  funcao inicio() {
+    real f,c, resultado
+    inteiro contador, resp
+    
+    contador = 0
+
+    escreva("Insira aqui o número de temperaturas a serem convertidas: ")
+    leia (resp)
+
+    enquanto( contador != resp){
+      contador = contador + 1 
+      escreva ("\nPergunta N", contador, ": Insira aqui a temperatura em Fahrenheita ser convertida para Celsius:  ")
+      leia(f)
+
+      c = 5 * (f - 32) / 9
+
+      escreva("Resposta N", contador, ": ",mat.arredondar(f, 2), " FAHRENHEIT EQUIVALE A ", mat.arredondar(c, 2), " CELSIUS")
+    }
+  }
+}
