@@ -1,0 +1,18 @@
+programa {
+    inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+    real temperatura
+    real volume_chuva
+    escreva("digite aqui a temperatura(em Fahrenheit): ")
+    leia (temperatura)
+    escreva("digite aqui a quantidade de chuva (em Polegadas): ")
+    leia (volume_chuva)
+
+    temperatura = (temperatura - 32)/1.8
+    volume_chuva = volume_chuva * 25.4
+
+    escreva ("O VALOR EM CELSIUS = ", mat.arredondar(temperatura, 2), "\n")
+    escreva ("A QUANTIDADE DE CHUVA E = ", mat.arredondar(volume_chuva, 2), "\n")
+  }
+}
