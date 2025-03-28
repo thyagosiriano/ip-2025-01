@@ -1,0 +1,30 @@
+programa {
+  funcao inicio() {
+    real conta_cliente, valor_pagar
+    inteiro consumom3
+    caracter consumidor 
+
+    escreva("digite aqui o número da sua conta: ")
+    leia(conta_cliente)
+
+    escreva("digite aqui seu consumo de água(em m³): ")
+    leia(consumom3)
+
+    escreva("digite R se for consumidor Residencial, C se for consumidor Comercial ou I se for consumidor Industrial: ")
+    leia(consumidor)
+
+    se (consumidor=="R" ou consumidor=="r"){
+      valor_pagar = 5 + 0.05 * consumom3
+    }
+    se (consumidor=="C" ou consumidor=="c"){
+      valor_pagar = 500 + 0.25 * (consumom3 - 80)  
+    }
+    se (consumidor=="I" ou consumidor=="i"){
+      valor_pagar = 800 + 0.04 * (consumom3 - 100)  
+    }
+    escreva("\n", "CONTA = ", conta_cliente, "\n")
+    escreva("\n", "VALOR DA CONTA = ", valor_pagar, "\n")
+
+
+  }
+}
