@@ -1,0 +1,20 @@
+programa {
+  inclua biblioteca Matematica --> mat
+  funcao inicio() {   
+
+   real salario_minimo, energia, precoKW, energia_gasta, conta_energia, conta_desconto
+
+  escreva("digite aqui o valor do sálario mínimo atual: ")
+  leia(salario_minimo)
+
+  precoKW= (salario_minimo * 0.7)/100
+  
+  escreva("digite aqui a quantidade de energia gasta (em KW): ")
+  leia(energia_gasta)
+
+  conta_energia = energia_gasta * precoKW
+  conta_desconto = conta_energia * 0.9
+
+  escreva("Custo por KW: R$", mat.arredondar(precoKW,2),"\n")
+  escreva("Custo do consumo: R$", mat.arredondar(conta_energia,2),"\n")
+  escreva("Custo com desconto: R$", mat.arredondar(conta_desconto,2),"\n")
