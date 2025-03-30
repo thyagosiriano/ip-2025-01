@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	var numero float64
+
+	fmt.Println("Digite um número: ")
+	fmt.Scanf("v", &numero)
+
+	if numero >= 20 && numero <= 90 {
+		fmt.Printf("O número %f está entre 20 e 90.\n", numero)
+	} else {
+		fmt.Printf("O número %f NÃO está entre 20 e 90.\n", numero)
+	}
+}
