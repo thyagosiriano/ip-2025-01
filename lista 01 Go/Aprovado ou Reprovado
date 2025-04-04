@@ -1,0 +1,33 @@
+package main
+import "fmt"
+
+func main() {
+    var n1, n2, n3, media float64
+    fmt.Print("Insira aqui a primeira nota: ")
+    fmt.Scanf("%f",&n1)
+    if n1<0 || n1>10{
+        fmt.Print("Número inválido")
+        return
+    }
+    
+    fmt.Print("Insira aqui a segunda nota: ")
+    fmt.Scanf("%f",&n2)
+    if n2<0 || n2>10{
+        fmt.Print("Número inválido")
+        return
+    }
+    fmt.Print("Insira aqui a terceira nota: ")
+    fmt.Scanf("%f",&n3)
+    if n3<0 || n3>10{
+        fmt.Print("Número inválido")
+        return
+    }
+    
+    media = (n1 + n2 + n3)/3
+    fmt.Printf("MEDIA = %.2f\n", media)
+    if media >= 6{
+        fmt.Print("APROVADO")
+    } else{
+        fmt.Print("REPROVADO")
+    }
+}
