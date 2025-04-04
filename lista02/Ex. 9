@@ -1,0 +1,23 @@
+package main
+import "fmt"
+
+func main() {
+    var valorCompra, valorVenda float64
+ 
+  fmt.Print("Insira o valor da compra: ")
+  fmt.Scan(&valorCompra)
+  
+  if valorCompra < 0{
+      fmt.Println("Valor inválido")
+      return
+  }else if valorCompra < 10.00{
+      valorVenda = 0.7 * valorCompra
+  }else if valorCompra < 30.00{
+      valorVenda = 0.5 * valorCompra
+  }else if valorCompra < 50.00{
+      valorVenda = 0.4 * valorCompra
+  }else{
+      valorVenda = 0.3 * valorCompra
+  }
+   fmt.Printf("O Valor da venda é: R$%.2f \n", valorVenda)
+}
