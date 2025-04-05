@@ -1,0 +1,25 @@
+package main
+import "fmt"
+
+func main() {
+    var njogos int
+    var p, g, a, c, renda, ptot float64
+  fmt.Print("Digite o número de jogos: ")
+  fmt.Scan(&njogos)
+  for i:= 1; i<= njogos; i++{
+  fmt.Print("Digite o público total: ")
+  fmt.Scan(&ptot)
+  fmt.Print("Digite a porecentagem de pessoas na popular: ")
+  fmt.Scan(&p)
+  fmt.Print("Digite a porecentagem de pessoas na geral: ")
+  fmt.Scan(&g)
+  fmt.Print("Digite a porecentagem de pessoas na arquibancada: ")
+  fmt.Scan(&a)
+  fmt.Print("Digite a porecentagem de pessoas nas cadeiras: ")
+  fmt.Scan(&c)
+  
+  renda= ((p*ptot) + 5*(g*ptot) + 10*(a*ptot) + 20*(c*ptot))/100
+  fmt.Printf("A RENDA DO JOGO N. %d E= %.2f\n", i, renda)
+  }
+  
+}
