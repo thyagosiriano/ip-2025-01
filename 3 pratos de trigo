@@ -4,5 +4,5 @@ import "fmt"
 func main() {
     var n int
   fmt.Scan(&n)
-  fmt.Printf("%d pratos de trigo para %d tigres tristes", n, n)
+  fmt.Printf("%d pratos de trigo pra %d tigres tristes", n, n)
 }
