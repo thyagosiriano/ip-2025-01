@@ -1,1 +1,12 @@
+package main
+import "fmt"
 
+func main() {
+    var a, b, c, d, determinante float64
+//testando uma sintaxe diferente...
+    fmt.Scanf("%f %f %f %f", &a, &b, &c, &d)
+    
+    determinante= (a*d) - (b*c)
+    
+    fmt.Printf("O VALOR DO DETERMINANTE E= %.2f", determinante)
+}
