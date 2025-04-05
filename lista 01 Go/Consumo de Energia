@@ -1,1 +1,19 @@
+package main
+import "fmt"
 
+func main() {
+   var salarioMinimo, precoKW, KWgasto, custoConsumo, custoDesconto float64
+   //Input
+   fmt.Print("Digite aqui o valor do salário mínimo atual: ")
+   fmt.Scan(&salarioMinimo)
+   fmt.Print("Digite aqui a energia gasta na residência (em KW): ")
+   fmt.Scan(&KWgasto)
+   //Cálculos
+   precoKW= (0.7*salarioMinimo)/100
+   custoConsumo= precoKW*KWgasto
+   custoDesconto= 0.9*custoConsumo
+   //Output
+   fmt.Printf("Custo por kW: R$%.2f\n", precoKW)
+   fmt.Printf("Custo do consumo: R$%.2f\n", custoConsumo)
+   fmt.Printf("Custo com desconto: R$%.2f\n", custoDesconto)
+}
