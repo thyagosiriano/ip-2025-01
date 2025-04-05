@@ -1,1 +1,14 @@
+package main
+import "fmt"
 
+func main() {
+  const pi = 3.14159
+  var r, h, preco float64
+  //Input
+  fmt.Scanf("%f", &r)
+  fmt.Scanf("%f", &h)
+  //Cálculo
+  preco= 100* (2*(pi*r*r)+ (2*pi*r*h))
+  //Output
+  fmt.Printf("O VALOR DO CUSTO E= %.2f\n", preco)
+}
