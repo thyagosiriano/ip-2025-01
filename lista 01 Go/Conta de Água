@@ -1,1 +1,32 @@
+package main
+import "fmt"
 
+func main() {
+    var tipoCons string
+    var nconta int
+    var consumo, vconta float64
+//Input
+fmt.Print("Insira aqui o número da sua conta: ")
+  fmt.Scan(&nconta)
+  fmt.Print("Insira aqui o consumo de água(em m³): ")
+  fmt.Scan(&consumo)
+  fmt.Print("Insira aqui seu tipo de consumo. Digite R para residencial, C para comercial ou I para industrial: ")
+  fmt.Scan(&tipoCons)
+  
+ // Verificação
+  if tipoCons !="R" && tipoCons!="C" && tipoCons!="I" && tipoCons !="r" && tipoCons!="c" && tipoCons!="i"{
+      fmt.Print("Dígito inválido")
+      return
+  }else{
+ //Cálculos
+  if tipoCons=="R" || tipoCons=="r"{
+      vconta= 5+ 0.5*consumo
+  }else if tipoCons=="C"|| tipoCons=="c"{
+      vconta= 500+ (consumo-80)*0.25
+  }else{
+      vconta= 800+ (consumo-100)*0.04
+  }
+  //Output
+  fmt.Printf("CONTA= %d\n", nconta)
+  fmt.Printf("VALOR DA CONTA= %.2f", vconta)
+}}
