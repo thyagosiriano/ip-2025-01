@@ -1,1 +1,15 @@
+package main
+import "fmt"
 
+func main() {
+    var ntempF int
+    var tempC, tempF float64
+    fmt.Print("Insira aqui o número de temperaturas em Fahrenheit: ")
+    fmt.Scan(&ntempF)
+    
+    for i:= 1; i <= ntempF; i++{
+        fmt.Print("Insira aqui a temperatura em °F: ")
+        fmt.Scan(&tempF)
+        tempC= (5*(tempF-32))/9
+        fmt.Printf("%.2f FAHRENHEIT EQUIVALE A %.2f CELCIUS\n", tempF, tempC)
+    }
