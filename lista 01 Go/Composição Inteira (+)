@@ -1,1 +1,21 @@
+package main
+import "fmt"
 
+func main() {
+   var n1, n2, n3, numero, quadrado int
+   fmt.Print("Insira aqui o primeiro número: ")
+   fmt.Scan(&n1)
+   fmt.Print("Insira aqui o segundo número: ")
+   fmt.Scan(&n2)
+   fmt.Print("Insira aqui o terceiro número: ")
+   fmt.Scan(&n3)
+   //Verificação de digitos válidos
+   if n1>=10 || n2>=10 ||n3>=10{
+       fmt.Print("DIGITO INVALIDO")
+       return
+   }
+   numero = n1*100 + n2*10 + n3
+   quadrado = numero*numero
+   fmt.Printf("%d, %d", numero, quadrado)
+   
+}
