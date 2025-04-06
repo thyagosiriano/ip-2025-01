@@ -1,1 +1,16 @@
+package main
+import(
+    "fmt"
+    "math"
+)
 
+func main() {
+    var h, a, Ab, volume float64
+//ENTRADA
+    fmt.Scanf("%f %f", &h, &a)
+//CÁLCULOS 
+    Ab= (3* (a*a) * math.Sqrt(3)) /2
+    volume= (Ab * h) / 3
+//SAÍDA
+    fmt.Printf("O VOLUME DA PIRAMIDE E= %.2f METROS CUBICOS", volume)
+}
