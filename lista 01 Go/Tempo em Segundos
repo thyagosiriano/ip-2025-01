@@ -1,1 +1,11 @@
+package main
+import "fmt"
 
+func main() {
+    var h, m, s, tempo int
+    fmt.Scan(&h)
+    fmt.Scan(&m)
+    fmt.Scan(&s)
+    tempo= h*60*60 + m*60 + s
+    fmt.Printf("O TEMPO EM SEGUNDOS E= %d", tempo)
+}
