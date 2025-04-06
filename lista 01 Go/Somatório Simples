@@ -1,1 +1,17 @@
+package main
+import "fmt"
 
+func main() {
+    var somatorio float64
+    var n int
+    fmt.Scanf("%d", &n)
+    if n <= 1{
+        fmt.Println("Numero invalido!")
+        return
+    }else{
+        for i:= 1; i <= n; i++{
+        somatorio += 1.0 / float64(i) 
+        }
+        fmt.Printf("%.6f\n", somatorio)
+    }
+}
