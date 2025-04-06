@@ -1,1 +1,12 @@
+package main
+import "fmt"
 
+func main() {
+    var a1, r, n, soma int
+    fmt.Scanf("%d %d %d\n", &a1, &r, &n)
+    for i := 0; i < n; i++{
+     termo := a1 + i*r
+        soma += termo
+    }
+    fmt.Printf("%d", soma)
+}
