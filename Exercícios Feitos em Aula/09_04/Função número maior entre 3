@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+	n1, n2, n3 := 0, 0, 0
+	fmt.Scan(&n1)
+	fmt.Scan(&n2)
+	fmt.Scan(&n3)
+
+	m := maior(n1, n2, n3)
+	fmt.Printf("O maior número entre %d, %d e %d é %d", n1, n2, n3, m)
+}
+
+func maior(numero1, numero2, numero3 int) int {
+	if numero1 > numero2 && numero1 > numero3 {
+		return numero1
+
+	} else if numero2 > numero1 && numero2 > numero3 {
+		return numero2
+
+	} else if numero3 > numero2 && numero3 > numero1 {
+		return numero3
+	}
+	return numero3
+}
