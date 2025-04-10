@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func busca(l []int, x int) int {
+	for i := 0; i < len(l); i++ {
+		if l[i] == x {
+			return i
+		}
+	}
+	return -1
+}
+
+func main() {
+	l := []int{10, 9, 8, 7, 6}
+	var x int
+	fmt.Scan(&x)
+
+	posição := busca(l, x)
+	if posição != -1 {
+		fmt.Printf("Número encontrado na posição %d\n", posição)
+	} else {
+		fmt.Println("Número não encontrado")
+	}
+}
