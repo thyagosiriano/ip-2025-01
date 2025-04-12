@@ -1,1 +1,16 @@
+package main
+import(
+    "fmt"
+    "math"
+)
 
+func main() {
+    var n, resultado float64
+    fmt.Scan(&n)
+    if n < 0{
+        resultado = n * n 
+    }else{
+        resultado = math.Sqrt(n)
+    }
+    fmt.Printf("Resultado = %f\n", resultado)
+}
