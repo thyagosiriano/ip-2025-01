@@ -1,1 +1,21 @@
+package main
 
+import "fmt"
+
+func main() {
+
+	var vetor []int
+	var achou = 0
+	for i := 0; i < 10; i++ {
+		var n int
+		fmt.Scan(&n)
+		vetor = append(vetor, n)
+		if n > 50 {
+			achou = 1
+			fmt.Printf("O número %d, encontrado na posição %d é superior à 50.\n", n, i)
+		}
+	}
+	if achou == 0 {
+		fmt.Print("não há números maiores que 50.")
+	}
+}
