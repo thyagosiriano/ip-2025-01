@@ -1,1 +1,28 @@
+package main
 
+import "fmt"
+
+func main() {
+
+	var numeros []int
+	var pares []int
+	var impares []int
+	var n, somaP int
+	for i := 0; i < 10; i++ {
+		fmt.Scan(&n)
+		numeros = append(numeros, n)
+		if n%2 == 0 {
+			pares = append(pares, n)
+		} else {
+			impares = append(impares, n)
+		}
+	}
+	fmt.Println(pares)
+	for i := 0; i < len(pares); i++ {
+		somaP += pares[i]
+	}
+	fmt.Println(somaP)
+
+	fmt.Println(impares)
+	fmt.Println(len(impares))
+}
