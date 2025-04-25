@@ -1,1 +1,46 @@
+package main
 
+import "fmt"
+
+func main() {
+
+	var n, soman5 int
+	var n10 []int
+	var n5 []int
+	var pares []int
+	var impares []int
+	var vresultante1 []int
+	var vresultante2 []int
+
+	fmt.Println("Digite os 10 números do primeiro vetor: ")
+	for i := 0; i < 10; i++ {
+		fmt.Scan(&n)
+		n10 = append(n10, n)
+		if n%2 == 0 {
+			pares = append(pares, n)
+		} else {
+			impares = append(impares, n)
+		}
+
+	}
+	fmt.Println("Escreva os 5 números do segundo vetor: ")
+	for i := 0; i < 5; i++ {
+		fmt.Scan(&n)
+		n5 = append(n5, n)
+		soman5 += n
+	}
+	for i := 0; i < len(pares); i++ {
+		vresultante1 = append(vresultante1, pares[i]+soman5)
+	}
+	for i := 0; i < len(impares); i++ {
+		vresultante2 = append(vresultante2, impares[i]+soman5)
+	}
+
+	fmt.Println("Primeiro vetor:", n10)
+	fmt.Println("Números pares:", pares)
+	fmt.Println("Números ímpares:", impares)
+	fmt.Println("Segundo vetor:", n5)
+	fmt.Println("Soma dos elementos do segundo vetor:", soman5)
+	fmt.Println("Primeiro vetor resultante (pares + soma):", vresultante1)
+	fmt.Println("Segundo vetor resultante (ímpares + soma):", vresultante2)
+}
